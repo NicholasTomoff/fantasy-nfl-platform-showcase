@@ -5,8 +5,9 @@
 
 This project is a full-stack Fantasy NFL platform designed to support multi-league play, custom scoring logic, weekly stat ingestion, and both web and mobile clients.
 
-The **production codebase is private** due to ongoing development and potential monetization.  
-This public repository serves as a **technical showcase**, documenting system architecture, data flows, API design, and representative implementation patterns.
+The platform explores **alternative fantasy scoring mechanics** and scalable backend architecture, implementing a **threshold-based, streak-amplified scoring model designed to reward consistency over single-week volatility**, rather than traditional cumulative stat scoring. Users make weekly positional selections (QB, RB, WR), with points increasing through sustained performance streaks and cross-position bonuses.
+
+The **production codebase is private** due to ongoing development and potential monetization. This public repository serves as a **technical showcase**, documenting system architecture, data flows, API design, and representative implementation patterns without exposing proprietary logic or full source code.
 
 ---
 
