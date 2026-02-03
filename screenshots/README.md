@@ -103,6 +103,8 @@ may reflect in-progress UI iterations.
 ## Mobile View (Optional)
 
 ![Mobile View](MainPage_Mobile.png)
+<br>Standings:<br>
+![Mobile View](Standings_Mobile1.png)
 
 **Purpose**
 - Confirms responsive layout and mobile usability
