@@ -12,19 +12,19 @@ may reflect in-progress UI iterations.
 
 ## Landing Page / Login & Sign-up Overview
 
-![Home](mainpage.png)
+![Home](MainPage.png)
 
 **Purpose**
 - Inviting page to a unique Fantasy game, TripleStreak!
 - Serves as the landing page
 - Provides Login & Sign-up capability
-![Login](login.png)
+![Login](Login.png)
 
 ---
 
 ## Dashboard / League Overview
 
-![League Dashboard](viewleagues.png)
+![League Dashboard](ViewLeagues.png)
 
 **Purpose**
 - Displays league-level context
@@ -35,7 +35,7 @@ may reflect in-progress UI iterations.
 
 ## Weekly Picks Interface
 
-![Weekly Picks](pickplayers.png)
+![Weekly Picks](PickPlayers.png)
 
 **Purpose**
 - Users submit weekly selections by position (QB, RB, WR)
@@ -46,7 +46,7 @@ may reflect in-progress UI iterations.
 
 ## Locked Player Controls
 
-![Locked Players](pickplayersposition.png)
+![Locked Players](PickPlayersPosition.png)
 
 **Purpose**
 - Demonstrates UX-level enforcement of game-time locking and positional streak rules
@@ -57,7 +57,7 @@ may reflect in-progress UI iterations.
 
 ## Standings / Rankings
 
-![Standings](standings.png)
+![Standings](Standings.png)
 
 **Purpose**
 - Displays league-level context and member standings
@@ -81,7 +81,7 @@ may reflect in-progress UI iterations.
 
 ## Player Stats
 
-![Stats](playerstats.png)
+![Stats](PlayerStats.png)
 
 **Purpose**
 - Serves as a player stats view visualization hub for the season
