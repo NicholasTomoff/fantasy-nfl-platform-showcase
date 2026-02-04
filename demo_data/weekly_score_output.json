@@ -1,0 +1,15 @@
+{
+  "user_email": "user1@example.com",
+  "week": 7,
+  "season": 2025,
+  "league_id": 42,
+  "qb_points": 6,
+  "rb_points": 5,
+  "wr_points": 4,
+  "qb_streak": 2,
+  "rb_streak": 1,
+  "wr_streak": 1,
+  "all_positions_hit": true,
+  "all_positions_bonus": 15,
+   "total_points": 38
+}

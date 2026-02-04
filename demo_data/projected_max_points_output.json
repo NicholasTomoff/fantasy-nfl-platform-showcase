@@ -1,0 +1,26 @@
+{
+  "league_id": 123,
+  "season": 2025,
+  "currentFinalizedWeek": 6,
+  "projected_to_week": 18,
+  "members": [
+    {
+      "user_email": "user@example.com",
+      "current_total_points": 87,
+      "projected_additional_points": 214,
+      "projected_final_total": 301,
+      "projected_positions_total": {
+        "qb": 72,
+        "rb": 71,
+        "wr": 71
+      },
+      "final_projected_streaks": {
+        "qb_streak": 9,
+        "rb_streak": 8,
+        "wr_streak": 10,
+        "all_positions_streak": 7
+      },
+      "weeks_projected": 12
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "user_email": "user1@example.com",
+    "league_id": 42,
+    "season": 2025,
+    "week": 7,  
+    "qb": 101,
+    "rb": 205,
+    "wr": 309
+  }
+]

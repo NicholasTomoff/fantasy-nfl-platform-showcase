@@ -46,3 +46,11 @@ B -->|Persist Snapshot| JSON
 DOCKER --> B
 HOST --> B
 CI --> B
+```
+
+### Architectural Notes
+
+- Player data ingestion is decoupled from runtime scoring to reduce API cost and rate-limit risk
+- Scoring workflows are API-triggered, enabling both manual admin runs and scheduled automation
+- JSON snapshots enable deterministic testing and local development without external dependencies
+- Backend is designed as an async-first service to support concurrent league scoring operations
