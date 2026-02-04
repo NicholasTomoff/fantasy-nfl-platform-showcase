@@ -21,6 +21,7 @@ async def score_week_with_session(db: AsyncSession, week: int, season: int, leag
     and weekly score persistence.
     """
     # --- Handle users without picks (carry-forward) ---
+    # picks: WeeklyPick records for this league/week (loaded earlier)
     picked_users = {p.user_email for p in picks}
     all_users = await get_league_users(db, league_id)
 
@@ -38,12 +39,12 @@ async def score_week_with_session(db: AsyncSession, week: int, season: int, leag
                 total_points=prev.total_points,
             )
         )
-
+    # Commit carry-forward rows early to ensure idempotency
+    # and avoid duplicate writes during scoring retries
     await db.commit()
-    ...# --- Omitted
-    # --- Load NFL games for this week
-    ...# --- Omitted
-    # --- Streak evaluations for league and users
+    ...# --- Omitted: load NFL games and player performance stats ---
+    ...# --- Omitted: map stats to user picks for evaluation ---
+    # --- Streak evaluations for league and users ---
     for pick in picks:
         prev = await get_previous_week_score(db, pick.user_email, week, league_id)
         total_points = prev.total_points if prev else 0
@@ -51,6 +52,7 @@ async def score_week_with_session(db: AsyncSession, week: int, season: int, leag
 
         for pos in ["qb", "rb", "wr"]:
             player_id = getattr(pick, pos)
+            # evaluate_pick_hit abstracts stat lookup + threshold evaluation
             hit = await evaluate_pick_hit(db, player_id, pos, week, season)
 
             current_streak, pos_points = await update_position_streak(
@@ -71,8 +73,9 @@ async def score_week_with_session(db: AsyncSession, week: int, season: int, leag
             db, pick.user_email, all_hit, week, league_id
         )
         total_points += all_bonus
-        ...# --- Omitted
-        # --- Save or update WeeklyScore
+        # --- Omitted: detailed score breakdown persistence ---
+        # --- Save or update WeeklyScore ---
+        # Idempotent write: update if exists, otherwise insert
         existing = await get_weekly_score(db, pick.user_email, week, league_id)
 
         if existing:

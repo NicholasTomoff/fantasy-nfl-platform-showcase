@@ -77,6 +77,17 @@ These examples are simplified to emphasize **pattern correctness**, not performa
 
 ---
 
+## How These Samples Relate
+
+Each file in this directory represents a different layer of responsibility:
+
+- Scoring orchestration handles **historical state mutation**
+- Projection logic performs **read-only forward simulation**
+- Evaluation helpers encapsulate **atomic business rules**
+
+Together, they demonstrate how complex domain logic is decomposed into
+cohesive, testable units without tight coupling.
+
 ## What Is Intentionally Omitted
 
 To protect ongoing development and potential monetization, this folder does **not** include:
